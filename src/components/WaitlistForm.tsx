@@ -33,20 +33,23 @@ const WaitlistForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-3xl mx-auto px-4">
-      <h3 className="text-2xl font-semibold gradient-text mb-8 text-center">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-8 max-w-lg mx-auto p-6 bg-white shadow-lg rounded-xl border border-gray-200"
+    >
+      <h3 className="text-2xl font-bold text-gray-700 text-center">
         Join the Waitlist
       </h3>
 
       {/* Inputs in a responsive layout */}
-      <div className="flex flex-wrap gap-4 md:flex-row flex-col">
+      <div className="flex flex-wrap gap-4">
         <input
           type="text"
           required
           placeholder="Your Name"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          className="w-[95%] md:flex-1 px-6 py-4 rounded-xl bg-white/50 backdrop-blur-sm border border-gray-300 focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all mx-auto"
+          className="w-full md:w-[48%] px-6 py-4 rounded-lg bg-gray-50 border border-gray-300 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
         />
 
         <input
@@ -55,16 +58,16 @@ const WaitlistForm: React.FC = () => {
           placeholder="Your Email"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          className="w-[95%] md:flex-1 px-6 py-4 rounded-xl bg-white/50 backdrop-blur-sm border border-gray-300 focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all mx-auto"
+          className="w-full md:w-[48%] px-6 py-4 rounded-lg bg-gray-50 border border-gray-300 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
         />
 
         <select
           required
           value={formData.specialty}
           onChange={(e) => setFormData({ ...formData, specialty: e.target.value })}
-          className="w-[95%] md:flex-1 px-6 py-4 rounded-xl bg-white/50 backdrop-blur-sm border border-gray-300 focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all mx-auto"
+          className="w-full px-6 py-4 rounded-lg bg-gray-50 border border-gray-300 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
         >
-          <option value="">Specialty</option>
+          <option value="">Select Specialty</option>
           <option value="cardiology">Cardiology</option>
           <option value="neurology">Neurology</option>
           <option value="oncology">Oncology</option>
@@ -73,15 +76,15 @@ const WaitlistForm: React.FC = () => {
         </select>
       </div>
 
-
+      {/* Submit Button */}
       <motion.button
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         disabled={loading}
-        className="relative w-full group"
+        className="relative w-full py-4 px-6 rounded-lg bg-gradient-to-r from-primary to-secondary text-white font-bold transition-all group hover:shadow-lg"
       >
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary to-secondary blur-md opacity-80 group-hover:opacity-100 transition-opacity" />
-        <div className="relative flex items-center justify-center bg-gradient-to-r from-primary to-secondary px-8 py-4 rounded-xl text-white font-semibold">
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary to-secondary blur-md opacity-80 group-hover:opacity-100 transition-opacity" />
+        <div className="relative flex items-center justify-center">
           {loading ? (
             <Loader className="w-5 h-5 animate-spin" />
           ) : success ? (
