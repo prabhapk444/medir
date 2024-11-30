@@ -49,7 +49,7 @@ const Solution: React.FC = () => {
     <section className="py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/30 to-white" />
       
-      {/* Decorative elements */}
+    
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary opacity-10 rounded-full blur-[120px]" />
       <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary opacity-10 rounded-full blur-[120px]" />
       

@@ -41,7 +41,7 @@ const WaitlistForm: React.FC = () => {
         Join the Waitlist
       </h3>
 
-      {/* Inputs in a responsive layout */}
+     
       <div className="flex flex-wrap gap-4">
         <input
           type="text"

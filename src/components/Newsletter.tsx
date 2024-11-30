@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Loader, CheckCircle, ArrowRight } from 'lucide-react';
 import useNewsletter from '../hooks/useNewsletter';
-import UserLoop from './UserLoop';
+
 
 const Newsletter: React.FC = () => {
   const { email, loading, success, error, subscribe, setEmail } = useNewsletter();
@@ -29,7 +29,7 @@ const Newsletter: React.FC = () => {
               Join thousands of medical professionals already transforming their practice with our tools.
             </p>
 
-            <UserLoop />
+          
           </div>
 
           <div>
